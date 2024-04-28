@@ -28,7 +28,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
           ))}
         </ul>
       </section>
-      <section>
+      <section className="mt-7">
         <Collection
           hasSearch={true}
           images={images?.data}
