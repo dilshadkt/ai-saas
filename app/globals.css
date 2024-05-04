@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background bg-yellow-200 h-screen overflow-hidden text-foreground;
   }
 }
 
@@ -80,7 +80,7 @@
 }
 
 .root {
-  @apply flex min-h-screen w-full flex-col bg-white lg:flex-row;
+  @apply flex max-h-screen w-full flex-col bg-white lg:flex-row;
 }
 
 .root-container {

@@ -4,6 +4,7 @@ import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import {
   aspectRatioOptions,
+  creditFee,
   defaultValues,
   transformationTypes,
 } from "@/constants";
@@ -27,6 +28,9 @@ import { updateCredits } from "@/lib/actions/user.actions";
 import { getCldImageUrl } from "next-cloudinary";
 import { addImage, updateImage } from "@/lib/actions/image.actions";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Example from "./Example";
+import { InsufficientCreditsModal } from "./InsufficientCreditsModal";
 export const formSchema = z.object({
   title: z.string(),
   aspectRatio: z.string().optional(),
@@ -188,7 +192,10 @@ const TransformationForm = ({
 
   return (
     <Form {...form}>
+      {/* /// example of the changes */}
+      <Example image={transformationType?.example} />
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        {creditBalance < Math.abs(creditFee) && <InsufficientCreditsModal />}
         <CustomField
           control={form.control}
           name="title"

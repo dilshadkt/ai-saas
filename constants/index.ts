@@ -126,6 +126,10 @@ export const transformationTypes = {
     subTitle: "Refine images by removing noise and imperfections",
     config: { restore: true },
     icon: "image.svg",
+    example: {
+      before: "/assets/images/examples/restore-before.jpg",
+      after: "/assets/images/examples/restore-after.jpg",
+    },
   },
   removeBackground: {
     type: "removeBackground",
@@ -133,6 +137,10 @@ export const transformationTypes = {
     subTitle: "Removes the background of the image using AI",
     config: { removeBackground: true },
     icon: "camera.svg",
+    example: {
+      before: "/assets/images/examples/bgremover-after.jpg",
+      after: "/assets/images/examples/bgremover-before.png",
+    },
   },
   fill: {
     type: "fill",
@@ -140,6 +148,10 @@ export const transformationTypes = {
     subTitle: "Enhance an image's dimensions using AI outpainting",
     config: { fillBackground: true },
     icon: "stars.svg",
+    example: {
+      before: "/assets/images/examples/fill-before.jpg",
+      after: "/assets/images/examples/fill-after.jpg",
+    },
   },
   remove: {
     type: "remove",
@@ -149,6 +161,10 @@ export const transformationTypes = {
       remove: { prompt: "", removeShadow: true, multiple: true },
     },
     icon: "scan.svg",
+    example: {
+      before: "/assets/images/examples/remove-before.jpg",
+      after: "/assets/images/examples/remove-after.jpg",
+    },
   },
   recolor: {
     type: "recolor",
@@ -158,6 +174,10 @@ export const transformationTypes = {
       recolor: { prompt: "", to: "", multiple: true },
     },
     icon: "filter.svg",
+    example: {
+      before: "/assets/images/examples/recolor-before.jpg",
+      after: "/assets/images/examples/recolor-after.jpg",
+    },
   },
 };
 

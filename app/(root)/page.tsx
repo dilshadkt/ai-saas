@@ -12,15 +12,15 @@ export default async function Home({ searchParams }: SearchParamProps) {
   return (
     <>
       <section className="home">
-        <h1 className="home-heading">Uleash your Creative with Imgify</h1>
+        <h1 className="home-heading">Unlock Your Creativity with PicAi</h1>
         <ul className="flex-center gap-20 w-full">
           {navLinks.slice(0, 5).map((link) => (
             <Link
               href={link.route}
               key={link.route}
-              className="flex-center flex-col gap-2"
+              className="flex-center group flex-col gap-2"
             >
-              <li className="flex-center rounded-full w-fit bg-white p-4">
+              <li className="flex-center group-hover:scale-110 transition-all duration-300 rounded-full w-fit bg-white p-4">
                 <Image src={link.icon} alt="icon " width={24} height={24} />
               </li>
               <p className="p-14-medium text-center text-white">{link.label}</p>

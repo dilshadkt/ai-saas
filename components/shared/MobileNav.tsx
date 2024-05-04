@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -22,8 +23,8 @@ const MobileNav = () => {
         <Image
           src={"assets/images/logo-text.svg"}
           alt="logo"
-          width={180}
-          height={28}
+          width={120}
+          height={15}
         />
       </Link>
       <nav className="flex gap-2">
@@ -45,7 +46,7 @@ const MobileNav = () => {
                   <Image
                     src={"/assets/images/logo-text.svg"}
                     alt="logo"
-                    width={152}
+                    width={120}
                     height={23}
                   />
                 </>
@@ -59,14 +60,16 @@ const MobileNav = () => {
                           isActive && "text-gradient"
                         } p-18 whitespace-nowrap text-dark-700`}
                       >
-                        <Link className="sidebar-link" href={link.route}>
-                          <Image
-                            src={link.icon}
-                            alt="logo"
-                            width={24}
-                            height={24}
-                          />
-                          {link.label}
+                        <Link href={link.route}>
+                          <SheetClose className="sidebar-link">
+                            <Image
+                              src={link.icon}
+                              alt="logo"
+                              width={24}
+                              height={24}
+                            />
+                            {link.label}
+                          </SheetClose>
                         </Link>
                       </li>
                     );
