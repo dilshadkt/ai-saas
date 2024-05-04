@@ -36,7 +36,7 @@ const Example = ({
       </div>
       <hr />
       <h2 className="text-xl my-5 font-bold text-dark-600">
-        Now it's your turn
+        Now it&apos;s your turn
       </h2>
     </>
   );
